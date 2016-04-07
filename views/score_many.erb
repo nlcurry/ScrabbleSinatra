@@ -1,0 +1,14 @@
+<form action="" method="post" accept-charset="utf-8">
+	<fieldset>
+  <label for="words">Insert words separated by a space:</label>
+  <input type="text" name="words" value="" id="words">
+  <input type="submit" value= "Score it!">
+  </fieldset>
+</form>
+
+<% if @words != nil %> 
+	<% @match.each do |score| %>
+	<h3>The score of "<%= score[0] %>" is: <%= score[1]%></h3>
+	<%end%>
+	<h3>The total score is <%= @total_score%></h3>
+<% end %> 
